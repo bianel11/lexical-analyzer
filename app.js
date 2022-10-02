@@ -27,7 +27,7 @@ function analize() {
   const formattedText = text
     .replace(/(\r\n|\n|\r)/gm, " ") /* Removemos saltos de linea */
     .split(" ") /* Dividemos el texto en palabras */
-    .filter((word) => word !== "");
+    .filter((word) => word !== ""); /* Filtramos los espacios en blanco */
 
   console.log(formattedText);
   // Recorremos el texto
@@ -78,6 +78,7 @@ function analize() {
     }
   }
 
+  // Recoremos el resultado y lo agregamos en la tabla
   result.forEach((word, i) => {
     const row = document.createElement("tr");
     const token = document.createElement("td");
